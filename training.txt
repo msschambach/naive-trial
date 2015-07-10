@@ -1,0 +1,8 @@
+Rainforests are tremendously rich in animal life. Rainforests are populated with insects (like butterflies and beetles), arachnids (like spiders and ticks), worms, reptiles (like snakes and lizards), amphibians (like frogs and toads), birds (like parrots and toucans) and mammals (like sloths and jaguars). :: ANIMAL
+Elephants are very social animals, and learn about what to eat, where to find water and how to behave from their mothers and older bulls. :: ANIMAL
+When a predator eats one member of the group, it will get sick.  This memory will stay with the predator, who will avoid that type of animal in the future. This method sacrifices a few individuals in order to protect the entire group. :: ANIMAL
+Note: be careful about using this on sets containing integers; you will need to convert the integers to strings before the call to join. :: OTHER
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod :: OTHER
+It was acquired in 1877 by the Metropolitan Board of Works, which abolished the tolls. Victoria Bridge, narrow and structurally unsound, was renamed Chelsea Bridge to avoid embarrassment to the Royal Family if it collapsed. :: OTHER
+The four main railway stations in Manchester city centre are Piccadilly, Victoria, Oxford Road and Deansgate which all form part of the Manchester station group. :: OTHER
+Serving as virtual librarians, Wikipedia volunteers tackle your questions on a wide range of subjects. :: OTHER
