@@ -2,7 +2,7 @@ import sys, pprint, math
 from sets import Set 
 
 
-def read_training_file(filename):
+def train(filename):
 	animals_count = 0
 	others_count = 0
 
@@ -19,8 +19,7 @@ def read_training_file(filename):
 			(text, category) = line.split('::')
 
 			# Filter out noise
-			text = text.translate(None,'!,.?;:(){}')
-			text = text.strip()
+			text = text.translate(None,'!,.?;:(){}').strip()
 
 			words = text.split(' ')
 
@@ -38,10 +37,10 @@ def read_training_file(filename):
 				# Generate class doc
 				if animal_class_set == None:
 					animal_class_set = animal_wordset
-					animal_class_doc = [x for x in words if x != '']
+					animal_class_doc = [x for x in words if x != ''] # Removing elements with an empty string
 				else:
 					animal_class_set = animal_class_set.union(animal_wordset)
-					animal_class_doc = animal_class_doc + [x for x in words if x != '']
+					animal_class_doc = animal_class_doc + [x for x in words if x != ''] # Removing elements with an empty string
 
 				animals_count = animals_count + 1
 			elif category == 'OTHER':
@@ -51,10 +50,10 @@ def read_training_file(filename):
 				# Generate class doc
 				if other_class_set == None:
 					other_class_set = other_wordset
-					other_class_doc = [x for x in words if x != '']
+					other_class_doc = [x for x in words if x != ''] # Removing elements with an empty string
 				else:
 					other_class_set = other_class_set.union(other_wordset)
-					other_class_doc = other_class_doc + [x for x in words if x != '']
+					other_class_doc = other_class_doc + [x for x in words if x != ''] # Removing elements with an empty string
 
 				others_count = others_count + 1
 
@@ -156,26 +155,13 @@ def classify(filename, priors, conditional_probs,animal_doc_count,other_doc_coun
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def main():
 
 	# Get training file 
 	training_file = sys.argv[1]
 	testing_file = sys.argv[2]
 
-	results = classify(testing_file,*read_training_file(training_file))
+	results = classify(testing_file,*train(training_file))
 
 	pp = pprint.PrettyPrinter(indent=4)
 
